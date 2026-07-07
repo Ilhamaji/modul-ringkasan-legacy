@@ -1,4 +1,4 @@
-```markdown
+
 # Modul Ekstraksi dan Ringkasan Dokumen Otomatis (Groq API & PyMuPDF)
 
 Modul Python ini dirancang untuk mengunduh, mengekstrak, dan meringkas naskah dokumen akademis (jurnal ilmiah atau materi pembelajaran) dari sebuah URL web secara otomatis. Evaluasi performa sistem juga diintegrasikan untuk mengukur latensi dan akurasi ekstraksi teks guna kebutuhan pengujian performa model machine learning.
