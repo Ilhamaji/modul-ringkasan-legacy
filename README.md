@@ -67,7 +67,6 @@ Anda dapat langsung mengeksekusi skrip utama untuk melihat simulasi pengujian pa
 ```bash
 python main.py
 
-```
 
 ```
 
