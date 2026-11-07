@@ -2,43 +2,44 @@
 
 # Modul Ringkasan — Legacy (ARCHIVED)
 
-> ⚠️ **Repo ini sudah diarsipkan.** Kode di sini **identik** dengan versi lama dan telah digantikan oleh
-> **[`groq-article-summarizer`](https://github.com/Ilhamaji/groq-article-summarizer)** yang lebih baru.
-> Gunakan repo tersebut untuk versi terbaru.
+> ⚠️ **This repository is archived.** The code here is **identical** to the older version and has been superseded by
+> **[`groq-article-summarizer`](https://github.com/Ilhamaji/groq-article-summarizer)**. Use that repo for the latest version.
 
 [![Status](https://img.shields.io/badge/status-archived-lightgrey?style=flat-square)](#)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+
+**English** · [Bahasa Indonesia](README.id.md)
 
 </div>
 
 ---
 
-## Kenapa Diarsipkan
+## Why This Is Archived
 
-Repo ini adalah salinan awal modul peringkasan yang dikembangkan untuk keperluan skripsi (Juli 2026). Versi yang lebih baru dan lebih lengkap dipindahkan ke **`groq-article-summarizer`** (September 2026).
+This repository is the early copy of the summarisation module, developed for thesis work in July 2026. The newer, more complete version lives in **`groq-article-summarizer`** (September 2026).
 
-Repo ini **tetap dibiarkan publik dan read-only** karena beberapa alasan:
+It stays public and read-only for three reasons:
 
-1. **Riwayat skripsi** — menyimpan jejak versi yang dipakai saat pengujian.
-2. **Script evaluasi** — berisi pengukuran latensi dan akurasi yang dirujuk di laporan.
-3. **Sitasi** — agar tautan lama tidak mati.
+1. **Thesis record** — it preserves the exact version used during testing.
+2. **Evaluation scripts** — it contains the latency and accuracy measurements referenced in the report.
+3. **Citations** — so existing links do not rot.
 
-## Pindah Ke Versi Terbaru
+## Move to the Current Version
 
 ```bash
 git clone https://github.com/Ilhamaji/groq-article-summarizer.git
 ```
 
-Perbedaan utama di versi baru: dokumentasi lengkap, struktur kode lebih rapi, dan penanganan error yang lebih baik. Fungsi intinya sama.
+The newer version adds full documentation, cleaner code structure, and better error handling. The core function is the same.
 
-## Isi Repo
+## Contents
 
 ```
-main.py            # pipeline peringkasan (identik dengan versi lama)
-requirements.txt   # dependensi
+main.py            # summarisation pipeline (identical to the old version)
+requirements.txt   # dependencies
 ```
 
-## Menjalankan (jika masih diperlukan)
+## Running It (if still needed)
 
 ```bash
 pip install -r requirements.txt
@@ -53,5 +54,5 @@ Python · Groq API (`llama-3.3-70b-versatile`) · PyMuPDF · BeautifulSoup4 · R
 ---
 
 <div align="center">
-Diarsipkan oleh <a href="https://github.com/Ilhamaji">Ilham Aji</a>
+Archived by <a href="https://github.com/Ilhamaji">Ilham Aji</a>
 </div>
