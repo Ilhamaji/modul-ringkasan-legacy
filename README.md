@@ -1,73 +1,57 @@
+<div align="center">
 
-# Modul Ekstraksi dan Ringkasan Dokumen Otomatis (Groq API & PyMuPDF)
+# Modul Ringkasan — Legacy (ARCHIVED)
 
-Modul Python ini dirancang untuk mengunduh, mengekstrak, dan meringkas naskah dokumen akademis (jurnal ilmiah atau materi pembelajaran) dari sebuah URL web secara otomatis. Evaluasi performa sistem juga diintegrasikan untuk mengukur latensi dan akurasi ekstraksi teks guna kebutuhan pengujian performa model machine learning.
+> ⚠️ **Repo ini sudah diarsipkan.** Kode di sini **identik** dengan versi lama dan telah digantikan oleh
+> **[`groq-article-summarizer`](https://github.com/Ilhamaji/groq-article-summarizer)** yang lebih baru.
+> Gunakan repo tersebut untuk versi terbaru.
+
+[![Status](https://img.shields.io/badge/status-archived-lightgrey?style=flat-square)](#)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+
+</div>
 
 ---
 
-## 🚀 Fitur Utama
+## Kenapa Diarsipkan
 
-* **Deteksi & Unduh PDF Otomatis:** Melakukan parsing HTML untuk menemukan tautan unduhan file PDF dari URL artikel jurnal (mendukung pola Open Journal Systems / OJS).
-* **Ekstraksi Teks Cerdas (PyMuPDF):** Mengekstrak teks dari file PDF dan memisahkan konten naskah utama dari bagian daftar pustaka secara otomatis menggunakan ekspresi reguler (Regex).
-* **Ringkasan Mendalam (Groq API):** Memanfaatkan model LLM `llama-3.3-70b-versatile` untuk menghasilkan ringkasan terstruktur dalam Bahasa Indonesia yang baku dan mengalir natural.
-* **Modul Evaluasi Skripsi:** Menyediakan fungsi pengujian otomatis untuk mengukur durasi latensi (*system latency*), kepatuhan format hasil (*regex parsing rate*), serta perhitungan tingkat kemiripan judul dan penulis menggunakan algoritma *SequenceMatcher*.
+Repo ini adalah salinan awal modul peringkasan yang dikembangkan untuk keperluan skripsi (Juli 2026). Versi yang lebih baru dan lebih lengkap dipindahkan ke **`groq-article-summarizer`** (September 2026).
 
----
+Repo ini **tetap dibiarkan publik dan read-only** karena beberapa alasan:
 
-## 🛠️ Prasyarat & Instalasi
+1. **Riwayat skripsi** — menyimpan jejak versi yang dipakai saat pengujian.
+2. **Script evaluasi** — berisi pengukuran latensi dan akurasi yang dirujuk di laporan.
+3. **Sitasi** — agar tautan lama tidak mati.
 
-Pastikan Anda telah memasang Python 3.10 atau versi yang lebih baru di lingkungan kerja Anda.
+## Pindah Ke Versi Terbaru
 
-### 1. Instalasi Package Dependensi
-Pasang seluruh pustaka eksternal yang dibutuhkan melalui terminal:
+```bash
+git clone https://github.com/Ilhamaji/groq-article-summarizer.git
+```
+
+Perbedaan utama di versi baru: dokumentasi lengkap, struktur kode lebih rapi, dan penanganan error yang lebih baik. Fungsi intinya sama.
+
+## Isi Repo
+
+```
+main.py            # pipeline peringkasan (identik dengan versi lama)
+requirements.txt   # dependensi
+```
+
+## Menjalankan (jika masih diperlukan)
+
 ```bash
 pip install -r requirements.txt
-
-```
-
-### 2. Konfigurasi Environment Variables
-
-Modul ini membutuhkan API Key dari Groq. Buat sebuah file bernama `.env` di direktori akar proyek Anda dan tambahkan baris berikut:
-
-```env
-GROQ_API_KEY=tp_gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-```
-
-> ⚠️ **Catatan Lingkungan Kerja:** > Jika dijalankan di dalam **Google Colab**, simpan API Key Anda pada menu **Secrets** (ikon gembok di panel kiri) dengan nama kunci `GROQ_API_KEY`, lalu aktifkan akses notebook ke kunci tersebut.
-
----
-
-## 💻 Struktur Output Ringkasan
-
-Hasil pemrosesan akhir dari Groq API akan di-parsing ke dalam bentuk objek *dictionary* dengan struktur sebagai berikut:
-
-* **judul:** Identitas atau judul lengkap dokumen/artikel.
-* **author:** Nama penulis dari dokumen asli.
-* **kompetensi:** Fokus utama masalah, tujuan penelitian, atau target kompetensi materi.
-* **isi_materi:** Pembahasan pokok, konsep dasar, atau metodologi yang digunakan.
-* **temuan:** Fakta penting, data riset, rumus, atau inti sari pembahasan.
-* **kesimpulan:** Kesimpulan menyeluruh yang ditulis dalam format **paragraf utuh** (naratif).
-* **daftar_pustaka:** Daftar referensi utama yang valid dari dokumen asli.
-
----
-
-## 📈 Modul Pengujian (Evaluasi Performa)
-
-Modul ini menyediakan fungsi `evaluate_modul()` yang berguna untuk pengujian sistem pada Bab IV (Hasil dan Pembahasan) tugas akhir Anda. Metrik yang dihasilkan meliputi:
-
-1. **Latency (Detik):** Kecepatan waktu respon sistem dari proses pengunduhan hingga inferensi selesai.
-2. **Regex Parsing Success (Boolean):** Mengukur tingkat keberhasilan sistem dalam mengisi seluruh field tanpa adanya struktur output yang kosong.
-3. **Similarity Score (%):** Tingkat kecocokan teks hasil generasi terhadap data *ground truth* (manual) untuk atribut Judul dan Penulis.
-
-### Cara Menjalankan Skrip Pengujian
-
-Anda dapat langsung mengeksekusi skrip utama untuk melihat simulasi pengujian pada terminal:
-
-```bash
+export GROQ_API_KEY="gsk_xxxxx"
 python main.py
-
-
 ```
 
-```
+## Tech Stack
+
+Python · Groq API (`llama-3.3-70b-versatile`) · PyMuPDF · BeautifulSoup4 · Regex
+
+---
+
+<div align="center">
+Diarsipkan oleh <a href="https://github.com/Ilhamaji">Ilham Aji</a>
+</div>
